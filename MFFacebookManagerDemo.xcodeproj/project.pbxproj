@@ -1,0 +1,350 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84275E2B150E43B700D1DDC4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84275E2A150E43B700D1DDC4 /* UIKit.framework */; };
+		84275E2D150E43B700D1DDC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84275E2C150E43B700D1DDC4 /* Foundation.framework */; };
+		84275E2F150E43B700D1DDC4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84275E2E150E43B700D1DDC4 /* CoreGraphics.framework */; };
+		84275E35150E43B700D1DDC4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84275E33150E43B700D1DDC4 /* InfoPlist.strings */; };
+		84275E37150E43B700D1DDC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84275E36150E43B700D1DDC4 /* main.m */; };
+		84275E3B150E43B700D1DDC4 /* MFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84275E3A150E43B700D1DDC4 /* MFAppDelegate.m */; };
+		84275E3E150E43B700D1DDC4 /* MFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84275E3D150E43B700D1DDC4 /* MFViewController.m */; };
+		84275E41150E43B700D1DDC4 /* MFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84275E3F150E43B700D1DDC4 /* MFViewController.xib */; };
+		84275E5A150E486800D1DDC4 /* fbconnect.png in Resources */ = {isa = PBXBuildFile; fileRef = 84275E59150E486800D1DDC4 /* fbconnect.png */; };
+		846C08C4150E571F006F1CF9 /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 846C08B7150E571F006F1CF9 /* FBDialog.bundle */; };
+		846C08C6150E57F5006F1CF9 /* libfacebook_ios_sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 846C08BD150E571F006F1CF9 /* libfacebook_ios_sdk.a */; };
+		846C08CC150E5AF1006F1CF9 /* MFFacebookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C08CB150E5AD5006F1CF9 /* MFFacebookManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		84275E26150E43B700D1DDC4 /* MFFacebookManagerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MFFacebookManagerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84275E2A150E43B700D1DDC4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		84275E2C150E43B700D1DDC4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		84275E2E150E43B700D1DDC4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		84275E32150E43B700D1DDC4 /* MFFacebookManagerDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MFFacebookManagerDemo-Info.plist"; sourceTree = "<group>"; };
+		84275E34150E43B700D1DDC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		84275E36150E43B700D1DDC4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84275E38150E43B700D1DDC4 /* MFFacebookManagerDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MFFacebookManagerDemo-Prefix.pch"; sourceTree = "<group>"; };
+		84275E39150E43B700D1DDC4 /* MFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFAppDelegate.h; sourceTree = "<group>"; };
+		84275E3A150E43B700D1DDC4 /* MFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFAppDelegate.m; sourceTree = "<group>"; };
+		84275E3C150E43B700D1DDC4 /* MFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFViewController.h; sourceTree = "<group>"; };
+		84275E3D150E43B700D1DDC4 /* MFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFViewController.m; sourceTree = "<group>"; };
+		84275E40150E43B700D1DDC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MFViewController.xib; sourceTree = "<group>"; };
+		84275E59150E486800D1DDC4 /* fbconnect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fbconnect.png; sourceTree = "<group>"; };
+		846C08B5150E571F006F1CF9 /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Facebook.h; sourceTree = "<group>"; };
+		846C08B6150E571F006F1CF9 /* FBConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBConnect.h; sourceTree = "<group>"; };
+		846C08B7150E571F006F1CF9 /* FBDialog.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBDialog.bundle; sourceTree = "<group>"; };
+		846C08B8150E571F006F1CF9 /* FBDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBDialog.h; sourceTree = "<group>"; };
+		846C08B9150E571F006F1CF9 /* FBFrictionlessRequestSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFrictionlessRequestSettings.h; sourceTree = "<group>"; };
+		846C08BA150E571F006F1CF9 /* FBLoginDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLoginDialog.h; sourceTree = "<group>"; };
+		846C08BB150E571F006F1CF9 /* FBRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBRequest.h; sourceTree = "<group>"; };
+		846C08BC150E571F006F1CF9 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		846C08BD150E571F006F1CF9 /* libfacebook_ios_sdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libfacebook_ios_sdk.a; sourceTree = "<group>"; };
+		846C08BE150E571F006F1CF9 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		846C08BF150E571F006F1CF9 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		846C08C0150E571F006F1CF9 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		846C08C1150E571F006F1CF9 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		846C08C2150E571F006F1CF9 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		846C08C3150E571F006F1CF9 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		846C08CA150E5AD5006F1CF9 /* MFFacebookManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFFacebookManager.h; sourceTree = "<group>"; };
+		846C08CB150E5AD5006F1CF9 /* MFFacebookManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFFacebookManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84275E23150E43B700D1DDC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				846C08C6150E57F5006F1CF9 /* libfacebook_ios_sdk.a in Frameworks */,
+				84275E2B150E43B700D1DDC4 /* UIKit.framework in Frameworks */,
+				84275E2D150E43B700D1DDC4 /* Foundation.framework in Frameworks */,
+				84275E2F150E43B700D1DDC4 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84275E1B150E43B600D1DDC4 = {
+			isa = PBXGroup;
+			children = (
+				84275E30150E43B700D1DDC4 /* MFFacebookManagerDemo */,
+				84275E29150E43B700D1DDC4 /* Frameworks */,
+				84275E27150E43B700D1DDC4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84275E27150E43B700D1DDC4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84275E26150E43B700D1DDC4 /* MFFacebookManagerDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84275E29150E43B700D1DDC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84275E2A150E43B700D1DDC4 /* UIKit.framework */,
+				84275E2C150E43B700D1DDC4 /* Foundation.framework */,
+				84275E2E150E43B700D1DDC4 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84275E30150E43B700D1DDC4 /* MFFacebookManagerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				846C08B4150E571F006F1CF9 /* facebook-ios-sdk */,
+				846C08CA150E5AD5006F1CF9 /* MFFacebookManager.h */,
+				846C08CB150E5AD5006F1CF9 /* MFFacebookManager.m */,
+				84275E39150E43B700D1DDC4 /* MFAppDelegate.h */,
+				84275E3A150E43B700D1DDC4 /* MFAppDelegate.m */,
+				84275E3C150E43B700D1DDC4 /* MFViewController.h */,
+				84275E3D150E43B700D1DDC4 /* MFViewController.m */,
+				84275E3F150E43B700D1DDC4 /* MFViewController.xib */,
+				84275E31150E43B700D1DDC4 /* Supporting Files */,
+			);
+			path = MFFacebookManagerDemo;
+			sourceTree = "<group>";
+		};
+		84275E31150E43B700D1DDC4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84275E59150E486800D1DDC4 /* fbconnect.png */,
+				84275E32150E43B700D1DDC4 /* MFFacebookManagerDemo-Info.plist */,
+				84275E33150E43B700D1DDC4 /* InfoPlist.strings */,
+				84275E36150E43B700D1DDC4 /* main.m */,
+				84275E38150E43B700D1DDC4 /* MFFacebookManagerDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		846C08B4150E571F006F1CF9 /* facebook-ios-sdk */ = {
+			isa = PBXGroup;
+			children = (
+				846C08B5150E571F006F1CF9 /* Facebook.h */,
+				846C08B6150E571F006F1CF9 /* FBConnect.h */,
+				846C08B7150E571F006F1CF9 /* FBDialog.bundle */,
+				846C08B8150E571F006F1CF9 /* FBDialog.h */,
+				846C08B9150E571F006F1CF9 /* FBFrictionlessRequestSettings.h */,
+				846C08BA150E571F006F1CF9 /* FBLoginDialog.h */,
+				846C08BB150E571F006F1CF9 /* FBRequest.h */,
+				846C08BC150E571F006F1CF9 /* JSON.h */,
+				846C08BD150E571F006F1CF9 /* libfacebook_ios_sdk.a */,
+				846C08BE150E571F006F1CF9 /* NSObject+SBJSON.h */,
+				846C08BF150E571F006F1CF9 /* NSString+SBJSON.h */,
+				846C08C0150E571F006F1CF9 /* SBJSON.h */,
+				846C08C1150E571F006F1CF9 /* SBJsonBase.h */,
+				846C08C2150E571F006F1CF9 /* SBJsonParser.h */,
+				846C08C3150E571F006F1CF9 /* SBJsonWriter.h */,
+			);
+			name = "facebook-ios-sdk";
+			path = "../facebook-ios-sdk";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84275E25150E43B700D1DDC4 /* MFFacebookManagerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84275E44150E43B700D1DDC4 /* Build configuration list for PBXNativeTarget "MFFacebookManagerDemo" */;
+			buildPhases = (
+				84275E22150E43B700D1DDC4 /* Sources */,
+				84275E23150E43B700D1DDC4 /* Frameworks */,
+				84275E24150E43B700D1DDC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MFFacebookManagerDemo;
+			productName = MFFacebookManagerDemo;
+			productReference = 84275E26150E43B700D1DDC4 /* MFFacebookManagerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84275E1D150E43B600D1DDC4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MF;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 84275E20150E43B600D1DDC4 /* Build configuration list for PBXProject "MFFacebookManagerDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 84275E1B150E43B600D1DDC4;
+			productRefGroup = 84275E27150E43B700D1DDC4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84275E25150E43B700D1DDC4 /* MFFacebookManagerDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84275E24150E43B700D1DDC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84275E35150E43B700D1DDC4 /* InfoPlist.strings in Resources */,
+				84275E41150E43B700D1DDC4 /* MFViewController.xib in Resources */,
+				84275E5A150E486800D1DDC4 /* fbconnect.png in Resources */,
+				846C08C4150E571F006F1CF9 /* FBDialog.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84275E22150E43B700D1DDC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				846C08CC150E5AF1006F1CF9 /* MFFacebookManager.m in Sources */,
+				84275E37150E43B700D1DDC4 /* main.m in Sources */,
+				84275E3B150E43B700D1DDC4 /* MFAppDelegate.m in Sources */,
+				84275E3E150E43B700D1DDC4 /* MFViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		84275E33150E43B700D1DDC4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84275E34150E43B700D1DDC4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		84275E3F150E43B700D1DDC4 /* MFViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84275E40150E43B700D1DDC4 /* en */,
+			);
+			name = MFViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84275E42150E43B700D1DDC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		84275E43150E43B700D1DDC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84275E45150E43B700D1DDC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MFFacebookManagerDemo/MFFacebookManagerDemo-Prefix.pch";
+				INFOPLIST_FILE = "MFFacebookManagerDemo/MFFacebookManagerDemo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/MFFacebookManagerDemo\"",
+					"\"$(SRCROOT)/facebook-ios-sdk\"",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		84275E46150E43B700D1DDC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MFFacebookManagerDemo/MFFacebookManagerDemo-Prefix.pch";
+				INFOPLIST_FILE = "MFFacebookManagerDemo/MFFacebookManagerDemo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/MFFacebookManagerDemo\"",
+					"\"$(SRCROOT)/facebook-ios-sdk\"",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84275E20150E43B600D1DDC4 /* Build configuration list for PBXProject "MFFacebookManagerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84275E42150E43B700D1DDC4 /* Debug */,
+				84275E43150E43B700D1DDC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84275E44150E43B700D1DDC4 /* Build configuration list for PBXNativeTarget "MFFacebookManagerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84275E45150E43B700D1DDC4 /* Debug */,
+				84275E46150E43B700D1DDC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84275E1D150E43B600D1DDC4 /* Project object */;
+}
