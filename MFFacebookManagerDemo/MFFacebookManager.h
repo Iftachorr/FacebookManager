@@ -9,10 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "FBConnect.h"
 
+// This is defined at your developer facebook app.  fb<your facebook app ID>
+// Notice: You need to define this at your info.plist as well, under 'URL types'.
+
 @interface MFFacebookManager : NSObject <FBSessionDelegate, FBRequestDelegate>{
 
     Facebook *facebook;
     NSArray *permissionsArray;
+    NSString *appId;
 
 }
 @property (nonatomic, readonly) Facebook *facebook;
@@ -26,6 +30,8 @@
 -(void) renewFacebookConnect;
 
 -(BOOL) isConnectedWithFacebook;
+
+-(BOOL) handleOpenURL:(NSURL *) url;
 
 
 

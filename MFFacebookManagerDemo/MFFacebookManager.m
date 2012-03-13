@@ -12,6 +12,7 @@ static MFFacebookManager *_sharedManager;
 
 @interface MFFacebookManager(private)
 
+-(NSString *) urlScheme;
 
 @end
 
@@ -39,6 +40,7 @@ static MFFacebookManager *_sharedManager;
 	if (self = [super init]) 
 	{
         facebook = [[Facebook alloc] initWithAppId:facebookAppId andDelegate:self];
+        appId = facebookAppId;
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         if ([defaults objectForKey:@"FBAccessTokenKey"] 
             && [defaults objectForKey:@"FBExpirationDateKey"]) {
@@ -68,6 +70,10 @@ static MFFacebookManager *_sharedManager;
     NSLog(@"fbDidExtendToken:expiresAt:");
 }
 
+
+
+#pragma mark - Additions
+
 -(BOOL) isConnectedWithFacebook
 {
     if(facebook.accessToken && facebook.expirationDate)
@@ -91,6 +97,27 @@ static MFFacebookManager *_sharedManager;
     else {
         NSLog(@"Already authorized");
     }
+}
+
+
+-(BOOL) handleOpenURL:(NSURL *) url
+{
+    if([[url absoluteString] hasPrefix:[self urlScheme]])
+    {
+        [facebook handleOpenURL:url];
+        return YES;
+    }
+    else 
+    {
+        return NO;
+    }
+}
+
+#pragma mark - Private
+
+-(NSString *) urlScheme
+{
+    return [NSString stringWithFormat:@"fb%@",appId];
 }
 
 

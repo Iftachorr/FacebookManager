@@ -28,35 +28,24 @@
 /************************************************************/
 /************************************************************/
 /************************************************************/
-// This is defined at your developer facebook app.  fb<your facebook app ID>
-// Notice: You need to define this at your info.plist as well, under 'URL types'.
-#define FACEBOOK_APP_URL_SCHEME @"fb123123123123123"
 // iOS < 4.2
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {
-    if([[url absoluteString] hasPrefix:FACEBOOK_APP_URL_SCHEME])
+    if(![[MFFacebookManager sharedManager] handleOpenURL:url])
     {
-        [[MFFacebookManager sharedManager].facebook handleOpenURL:url];
-    }
-    else 
-    {
-        // Do something else
-        
+        // This is not a facebook url scheme,
+        // Do your own thing...
     }
     
     return YES;    
 }
-// iOS > 4.2
+// iOS >= 4.2
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-    if([[url absoluteString] hasPrefix:FACEBOOK_APP_URL_SCHEME])
+    if(![[MFFacebookManager sharedManager] handleOpenURL:url])
     {
-        [[MFFacebookManager sharedManager].facebook handleOpenURL:url];
-    }
-    else 
-    {
-        // Do something else
-        
+        // This is not a facebook url scheme,
+        // Do your own thing...
     }
     
     return YES;    
