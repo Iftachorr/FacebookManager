@@ -52,27 +52,10 @@ static MFFacebookManager *_sharedManager;
 	return self;
 }
 
-- (void)fbDidLogin {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:[facebook accessToken] forKey:@"FBAccessTokenKey"];
-    [defaults setObject:[facebook expirationDate] forKey:@"FBExpirationDateKey"];
-    [defaults synchronize];
-    [facebook requestWithGraphPath:@"me" andDelegate:self];
-}
-
-- (void)fbDidNotLogin:(BOOL)cancelled
-{
-    NSLog(@"fbDidNotLogin:");
-}
-
-- (void)fbDidExtendToken:(NSString*)accessToken expiresAt:(NSDate*)expiresAt
-{
-    NSLog(@"fbDidExtendToken:expiresAt:");
-}
 
 
 
-#pragma mark - Additions
+#pragma mark - Public
 
 -(BOOL) isConnectedWithFacebook
 {
@@ -113,15 +96,44 @@ static MFFacebookManager *_sharedManager;
     }
 }
 
-#pragma mark - Private
 
--(NSString *) urlScheme
+
+
+
+
+#pragma mark - FBSessionDelegate
+
+- (void)fbDidLogin {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[facebook accessToken] forKey:@"FBAccessTokenKey"];
+    [defaults setObject:[facebook expirationDate] forKey:@"FBExpirationDateKey"];
+    [defaults synchronize];
+    [facebook requestWithGraphPath:@"me" andDelegate:self];
+}
+
+- (void)fbDidNotLogin:(BOOL)cancelled
 {
-    return [NSString stringWithFormat:@"fb%@",appId];
+    NSLog(@"fbDidNotLogin:");
+}
+
+- (void)fbDidExtendToken:(NSString*)accessToken expiresAt:(NSDate*)expiresAt
+{
+    NSLog(@"fbDidExtendToken:expiresAt:");
 }
 
 
-#pragma mark - Facebook Delegate
+- (void)fbDidLogout
+{
+    NSLog(@"fbDidLogout");
+}
+
+
+- (void)fbSessionInvalidated
+{
+    NSLog(@"fbSessionInvalidated");
+}
+
+#pragma mark - FBRequestDelegate
 
 /**
  * Called just before the request is sent to the server.
@@ -199,5 +211,17 @@ static MFFacebookManager *_sharedManager;
     NSLog(@"request:didLoadRawResponse:");
 }
 
+
+
+
+#pragma mark - Private
+
+-(NSString *) urlScheme
+{
+    return [NSString stringWithFormat:@"fb%@",appId];
+}
+
+
+#pragma mark -
 
 @end
