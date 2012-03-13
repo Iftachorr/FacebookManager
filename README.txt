@@ -1,4 +1,4 @@
-For information about how the prerequisites for using Facebook SSO (Single Sign On) see:
+For information about the prerequisites for using Facebook SSO (Single Sign On) see:
 https://developers.facebook.com/docs/mobile/ios/build/#sdk 
 
 This project is meant for showing how to create a Facebook Singleton Manager
